@@ -1,0 +1,20 @@
+/* 
+  Localizeble.strings
+  TestAppPryaniki
+
+  Created by User on 12.03.2021.
+  
+*/
+"welcomtitle" = "welcome";
+"HzId" = "HzTableViewCell";
+"PictureId" = "PictureTableViewCell";
+"SegmentCellId" = "SegmentTableViewCell";
+"error" = "Error";
+"hz" = "hz";
+"picture" = "picture";
+"selector" = "selector";
+"initObj" = "initialization object: - ";
+"Info" = "Info";
+"object" = "object";
+"open" = "Show picture?";
+"testApp" = "Pryaniki Test App";

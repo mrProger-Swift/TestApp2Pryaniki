@@ -1,0 +1,12 @@
+strings:
+  inputs: TestAppPryaniki/Base.lproj
+  outputs:
+    - templateName: structured-swift5
+      output: TestAppPryaniki/Sources/Strings.swift
+xcassets:
+  inputs:
+    - TestAppPryaniki/Sources/Assets.xcassets
+  outputs:
+    - templateName: swift5
+      output: TestAppPryaniki/Sources/Assets.swift
+
