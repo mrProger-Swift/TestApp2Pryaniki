@@ -29,31 +29,32 @@ class PryanikiModel: segmentedControllDelegate{
     }
     
     func cellConfigure(indexPath: IndexPath, tableView: UITableView) -> UITableViewCell{
-        let item = itemList.value[indexPath.section]
-        guard let cellInfo = itemData.first(where: { (response) -> Bool in
-            return response.name == item
-        }) else {
-            return UITableViewCell()
-        }
-        switch item {
+        let cellInfo = itemData[indexPath.section]
+        switch cellInfo.name {
         case L10n.hz:
+            print (cellInfo.name)
             let cell = tableView.dequeueReusableCell(withIdentifier: L10n.hzId,
                                                      for: indexPath) as! HzTableViewCell
             cell.cellConfigure(data: cellInfo.data)
             return cell
-        case L10n.picture:
-            let cell = tableView.dequeueReusableCell(withIdentifier: L10n.pictureId,
-                                                     for: indexPath) as! PictureTableViewCell
-            cell.cellConfigure(data: cellInfo.data)
-            return cell
+            
         case L10n.selector:
+            print (cellInfo.name)
             let cell = tableView.dequeueReusableCell(withIdentifier: L10n.segmentCellId,
                                                      for: indexPath) as! SegmentTableViewCell
             cell.delegate = self
             cell.cellConfigure(data: cellInfo.data)
             return cell
+            
+        case L10n.picture:
+            print (cellInfo.name)
+            let cell = tableView.dequeueReusableCell(withIdentifier: L10n.pictureId,
+                                                     for: indexPath) as! PictureTableViewCell
+            cell.cellConfigure(data: cellInfo.data)
+            return cell
+       
         default:
-            return UITableViewCell() 
+            return UITableViewCell()
         }
     }
     func showImage(tableView: UITableView, indexPath: IndexPath){

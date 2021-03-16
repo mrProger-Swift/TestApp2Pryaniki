@@ -43,7 +43,7 @@ class TableViewController: UITableViewController, tableViewDelegate {
     
     // MARK: - Table view data source
         override func numberOfSections(in tableView: UITableView) -> Int {
-            model.itemList.value.count
+            model.itemData.count
         }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -56,7 +56,7 @@ class TableViewController: UITableViewController, tableViewDelegate {
         return cell
     }
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let item = model.itemList.value[indexPath.section]
+        let item = model.itemData[indexPath.section].name
         let alert = AlertController.getAlert(title: L10n.info,
                                              message: L10n.initObj + item,
                                              cancelButton: false ) {
