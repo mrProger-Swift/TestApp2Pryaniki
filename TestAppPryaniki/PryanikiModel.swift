@@ -53,7 +53,7 @@ class PryanikiModel: segmentedControllDelegate{
             cell.cellConfigure(data: cellInfo.data)
             return cell
         default:
-            return UITableViewCell()
+            return UITableViewCell() 
         }
     }
     func showImage(tableView: UITableView, indexPath: IndexPath){
